@@ -7,6 +7,7 @@
   --Dark-grayish-blue: hsl(219, 9%, 45%);
   --Grayish-blue: hsl(220, 14%, 75%);
   --Light-grayish-blue: hsl(223, 64%, 98%);
+  --Black-lightbox: hsla(0, 0%, 0%, 0.750);
   }
 
 html,
@@ -205,7 +206,7 @@ a {
 .cartContainer {
   display: flex;
   position: absolute;
-  height: 300px;
+  height: 30%;
   width: 96%;
   flex-direction: column;
   background: white;
@@ -234,6 +235,7 @@ a {
   height: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .cartButton {
@@ -257,4 +259,94 @@ a {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+.itemWrapper {
+  display: flex;
+  width: 100%;
+}
 
+.itemDescription {
+  display: flex;
+  flex-direction: column;
+  color: var(--Dark-grayish-blue);
+  padding-left: 30px;
+}
+
+.itemDescription p {
+  margin: 0;
+  letter-spacing: 0.05rem;
+}
+
+.checkoutButton {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: var(--Orange);
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.deleteButton {
+  border: none;
+  background: none;
+  padding-left: 30px;
+}
+
+.priceTotal {
+  color: black;
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.priceInfo {
+  letter-spacing: 0.05rem;
+}
+
+.imgThumbnail {
+  padding-right: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+}
+
+.mobileMenu {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  
+}
+
+.mobileMenuWrapper {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+ .closeIcon {
+   margin-bottom: 50px;
+ }
+
+
+ .mobileScreen {
+   background: var(--Black-lightbox);
+   width: 100%;
+   height: 100%;
+ }

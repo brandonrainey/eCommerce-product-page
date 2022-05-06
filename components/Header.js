@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 
-export default function Header({ open, setOpen, count, setCount, cartCount }) {
+
+export default function Header({ open, setOpen, count, setCount, cartCount, setOpenMenu, openMenu }) {
+
+
+  
+
   return (
     <div className="headerContainer">
       <div className="headerCell">
-        <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} />
+        <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} onClick={() => setOpenMenu(!openMenu)}/>
+        
         <header>sneakers</header>
       </div>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function ({ cartCount, setCartCount }) {
+export default function Cart({ cartCount, setCartCount }) {
 
 
   

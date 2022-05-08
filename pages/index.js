@@ -6,9 +6,12 @@ import MobileProductImages from '../components/MobileProductImages'
 import ProductInfo from '../components/ProductInfo'
 import Cart from '../components/Cart'
 import MobileMenu from '../components/MobileMenu'
-
+import useMediaQuery from '../hooks/useMediaQuery'
+import DesktopProductImages from '../components/DesktopProductImages'
+import Lightbox from '../components/Lightbox'
 
 export default function Home() {
+  const isDesktop = useMediaQuery('(min-width: 480px)')
 
   const [count, setCount] = useState(0)
 
@@ -19,13 +22,36 @@ export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <div>
-      <Header open={open} setOpen={setOpen} count={count} setCount={setCount} cartCount={cartCount} setCartCount={setCartCount} setOpenMenu={setOpenMenu} openMenu={openMenu}/>
-      {openMenu ? <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu}/> : null}
-      
-      {open ? <Cart cartCount={cartCount} setCartCount={setCartCount}/> : null}
-      <MobileProductImages />
-      <ProductInfo count={count} setCount={setCount} cartCount={cartCount} setCartCount={setCartCount}/>
+    <div className='mainContainer'>
+      {/* <Lightbox /> */}
+      <Header
+        open={open}
+        setOpen={setOpen}
+        count={count}
+        setCount={setCount}
+        cartCount={cartCount}
+        setCartCount={setCartCount}
+        setOpenMenu={setOpenMenu}
+        openMenu={openMenu}
+        isDesktop={isDesktop}
+      />
+      {openMenu ? (
+        <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      ) : null}
+
+      {open ? <Cart cartCount={cartCount} setCartCount={setCartCount} /> : null}
+
+      <div className='mainWrapper'>
+        {isDesktop ? <DesktopProductImages/> : <MobileProductImages />}
+
+        <ProductInfo
+          count={count}
+          setCount={setCount}
+          cartCount={cartCount}
+          setCartCount={setCartCount}
+          isDesktop={isDesktop}
+        />
+      </div>
     </div>
   )
 }

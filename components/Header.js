@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import DesktopNav from './DesktopNav'
 
 
-export default function Header({ open, setOpen, count, setCount, cartCount, setOpenMenu, openMenu }) {
+export default function Header({ open, setOpen, count, setCount, cartCount, setOpenMenu, openMenu, isDesktop }) {
 
 
   
@@ -10,9 +11,13 @@ export default function Header({ open, setOpen, count, setCount, cartCount, setO
   return (
     <div className="headerContainer">
       <div className="headerCell">
-        <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} onClick={() => setOpenMenu(!openMenu)}/>
+        {isDesktop ? null : <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} onClick={() => setOpenMenu(!openMenu)}/>}
         
-        <header>sneakers</header>
+        <div className='navWrapper'>
+          <header>sneakers</header>
+        {isDesktop ? <DesktopNav /> : null}
+        </div>
+        
       </div>
 
       <div className="headerCell">

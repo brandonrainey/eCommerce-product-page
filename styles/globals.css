@@ -102,6 +102,10 @@ a {
   
 }
 
+.mainContainer {
+  height: 100vh;
+}
+
 .prevButton {
   padding-left: 4px;
 }

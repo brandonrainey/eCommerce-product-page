@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-export default function DesktopProductImages() {
+export default function DesktopProductImages({ openLightbox, setOpenLightbox }) {
   const [desktopImage, setDesktopImage] = useState(1)
 
   return (
@@ -12,7 +12,9 @@ export default function DesktopProductImages() {
           marginBottom: 60,
           borderRadius: '14px',
           overflow: 'hidden',
+          cursor: 'pointer'
         }}
+        onClick={() => setOpenLightbox(true)}
       >
         <Image
           src={`/image-product-${desktopImage}.jpg`}

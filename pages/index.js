@@ -21,9 +21,11 @@ export default function Home() {
 
   const [openMenu, setOpenMenu] = useState(false)
 
+  const [openLightbox, setOpenLightbox] = useState(false)
+
   return (
     <div className='mainContainer'>
-      {/* <Lightbox /> */}
+      {openLightbox ? <Lightbox openLightbox={openLightbox} setOpenLightbox={setOpenLightbox}/> : null}
       <Header
         open={open}
         setOpen={setOpen}
@@ -42,7 +44,7 @@ export default function Home() {
       {open ? <Cart cartCount={cartCount} setCartCount={setCartCount} /> : null}
 
       <div className='mainWrapper'>
-        {isDesktop ? <DesktopProductImages/> : <MobileProductImages />}
+        {isDesktop ? <DesktopProductImages openLightbox={openLightbox} setOpenLightbox={setOpenLightbox}/> : <MobileProductImages />}
 
         <ProductInfo
           count={count}

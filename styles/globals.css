@@ -8,7 +8,8 @@
   --Grayish-blue: hsl(220, 14%, 75%);
   --Light-grayish-blue: hsl(223, 64%, 98%);
   --Black-lightbox: hsla(0, 0%, 0%, 0.750);
-
+  --White-lightbox: rgba(255, 255, 255, 0.75);
+  --White-lightbox50: rgba(255, 255, 255, 0.50);
   }
 
 html,
@@ -17,6 +18,7 @@ body {
   margin: 0;
   font-family: 'Kumbh Sans', sans-serif;
   height: 100%;
+  overflow-y: hidden;
 }
 
 a {
@@ -103,7 +105,7 @@ a {
 }
 
 .mainContainer {
-  height: 100vh;
+  height: 100%;
 }
 
 .prevButton {
@@ -227,7 +229,7 @@ a {
   background: white;
   z-index: 100;
   border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   top: 90px;
 }
 
@@ -333,15 +335,15 @@ a {
   position: absolute;
   z-index: 200;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
-  
+  overflow: auto;
 }
 
 .mobileMenuWrapper {
   position: absolute;
   width: 60%;
-  height: 100vh;
+  min-height: 100%;
   background: white;
   display: flex;
   flex-direction: column;
@@ -366,7 +368,7 @@ a {
  .mobileScreen {
    background: var(--Black-lightbox);
    width: 100%;
-   height: 100vh;
+   height: 100%;
  }
 
  @media (min-width: 480px) {
@@ -540,7 +542,63 @@ a {
    display: flex;
    justify-content: center;
    align-items: center;
+   
  }
+
+ .lightboxWrapper {
+   display: flex;
+   height: 100%;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 40px;
+ }
+
+ .lightboxThumbnailWrapper {
+   display: flex;
+   width: 30%;
+   gap: 20px;
+ }
+
+ .thumbImg {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+ }
+
+ .imgCircleDesktop {
+   position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-right: -20px;
+  z-index: 10000;
+}
+
+.thumbImg:hover::after {
+  position: absolute;
+  content: '';
+  background: var(--White-lightbox50);
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.thumbSelected::after {
+  position: absolute;
+  content: '';
+  background: var(--White-lightbox);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  
+}
  }
 
  

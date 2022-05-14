@@ -9,6 +9,11 @@ import MobileMenu from '../components/MobileMenu'
 import useMediaQuery from '../hooks/useMediaQuery'
 import DesktopProductImages from '../components/DesktopProductImages'
 import Lightbox from '../components/Lightbox'
+import { AuthProvider } from '../contexts/AuthContext'
+import Login from '../components/Login'
+import Signup from '../components/Signup'
+import Dashboard from '../components/Dashboard'
+
 
 export default function Home() {
   const isDesktop = useMediaQuery('(min-width: 480px)')
@@ -23,8 +28,16 @@ export default function Home() {
 
   const [openLightbox, setOpenLightbox] = useState(false)
 
+  const [openLogin, setOpenLogin] = useState(false)
+
+  const [openSignup, setOpenSignup] = useState(false)
+
+  
+
   return (
-    <div className='mainContainer'>
+    <AuthProvider>
+
+      <div className='mainContainer'>
       {openLightbox ? <Lightbox openLightbox={openLightbox} setOpenLightbox={setOpenLightbox}/> : null}
       <Header
         open={open}
@@ -36,12 +49,17 @@ export default function Home() {
         setOpenMenu={setOpenMenu}
         openMenu={openMenu}
         isDesktop={isDesktop}
+        openLogin={openLogin}
+        setOpenLogin={setOpenLogin}
+        openSignup={openSignup}
+        setOpenSignup={setOpenSignup}
       />
       {openMenu ? (
         <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
       ) : null}
 
       {open ? <Cart cartCount={cartCount} setCartCount={setCartCount} /> : null}
+      
 
       <div className='mainWrapper'>
         {isDesktop ? <DesktopProductImages openLightbox={openLightbox} setOpenLightbox={setOpenLightbox}/> : <MobileProductImages />}
@@ -55,5 +73,7 @@ export default function Home() {
         />
       </div>
     </div>
+    </AuthProvider>
+    
   )
 }

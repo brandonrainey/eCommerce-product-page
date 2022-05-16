@@ -22,6 +22,7 @@ export default function Cart({ cartCount, setCartCount }) {
                     
                     height={50}
                     width={50}
+                    alt='image-product-1-thumbnail'
                   />
                 </div>
                 <div className="itemDescription">
@@ -37,6 +38,7 @@ export default function Cart({ cartCount, setCartCount }) {
                     layout="fixed"
                     height={15}
                     width={15}
+                    alt='delete icon'
                   />
                 </button>
               </div>

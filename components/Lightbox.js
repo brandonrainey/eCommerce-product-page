@@ -45,6 +45,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
             onMouseLeave={() => setCloseIcon('/icon-close-white.svg')}
             onClick={() => setOpenLightbox(false)}
             style={{ cursor: 'pointer' }}
+            alt='close icon'
           />
         </div>
 
@@ -76,6 +77,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="fixed"
                 width={10}
                 height={15}
+                alt='previous arrow icon'
               />
             </div>
           </div>
@@ -87,6 +89,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
               layout="responsive"
               width={300}
               height={300}
+              alt='lightbox product image'
             />
           </div>
           <div
@@ -110,6 +113,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="fixed"
                 width={10}
                 height={15}
+                alt='next arrow icon'
               />
             </div>
           </div>
@@ -135,6 +139,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
+                alt='product-1-thumbnail'
               />
             </div>
           </div>
@@ -158,6 +163,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
+                alt='product-2-thumbnail'
               />
             </div>
           </div>
@@ -181,6 +187,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
+                alt='product-3-thumbnail'
               />
             </div>
           </div>
@@ -204,6 +211,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
+                alt='product-4-thumbnail'
               />
             </div>
           </div>

@@ -31,12 +31,13 @@ export default function MobileProductImages() {
               height={18}
               width={12}
               className='arrowIcon'
+              alt='previous arrow icon'
             />
           </button>
         </div>
         <div className="imgNext">
           <button className="imgCircle nextButton" onClick={handleNextClick}>
-            <Image src="/icon-next.svg" layout="fixed" height={18} width={12} />
+            <Image src="/icon-next.svg" layout="fixed" height={18} width={12} alt='next arrow icon'/>
           </button>
         </div>
       </div>
@@ -47,6 +48,7 @@ export default function MobileProductImages() {
           layout="responsive"
           height={300}
           width={300}
+          alt='product image'
         />
       </div>
     </div>

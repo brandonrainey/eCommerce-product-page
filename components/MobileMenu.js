@@ -9,7 +9,7 @@ export default function MobileMenu({ openMenu, setOpenMenu }) {
     <div className="mobileMenu">
       <div className='mobileMenuWrapper'>
         <div className='closeIcon'>
-          <Image src="/icon-close.svg" layout='fixed' width={20} height={20}  onClick={() => setOpenMenu(!openMenu)}/>
+          <Image src="/icon-close.svg" layout='fixed' width={20} height={20}  onClick={() => setOpenMenu(!openMenu)} alt='close icon'/>
         </div>
         
         <nav className="mobileNav">

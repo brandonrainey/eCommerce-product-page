@@ -35,7 +35,7 @@ export default function Header({ open, setOpen, count, setCount, cartCount, setO
 
 
       <div className="headerCell">
-        {isDesktop ? null : <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} onClick={() => setOpenMenu(!openMenu)}/>}
+        {isDesktop ? null : <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} onClick={() => setOpenMenu(!openMenu)} alt='mobile sandwich icon'/>}
         
         <div className='navWrapper'>
           <header>sneakers</header>
@@ -46,7 +46,7 @@ export default function Header({ open, setOpen, count, setCount, cartCount, setO
 
       <div className="headerCell">
         <button className='cartButton' onClick={handleCartToggle}>
-          <Image src="/icon-cart.svg" layout="fixed" height={25} width={25} />
+          <Image src="/icon-cart.svg" layout="fixed" height={25} width={25} alt='cart icon'/>
           <span className={`${cartCount != 0 ? 'cartCounter' : ''}`}>{cartCount != 0 ? cartCount : null}</span>
         </button>
         
@@ -58,6 +58,7 @@ export default function Header({ open, setOpen, count, setCount, cartCount, setO
             height={30}
             width={30}
             className='imageAvatar'
+            alt='avatar image'
           />
         </a>
 

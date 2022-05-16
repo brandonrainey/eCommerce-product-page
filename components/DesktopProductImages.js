@@ -21,6 +21,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
           layout="responsive"
           width={300}
           height={300}
+          alt='product image'
         />
       </div>
 
@@ -46,6 +47,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
+              alt='product-1-thumbnail'
             />
           </div>
         </div>
@@ -71,6 +73,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
+              alt='product-2-thumbnail'
             />
           </div>
         </div>
@@ -96,6 +99,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
+              alt='product-3-thumbnail'
             />
           </div>
         </div>
@@ -121,6 +125,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
+              alt='product-4-thumbnail'
             />
           </div>
         </div>

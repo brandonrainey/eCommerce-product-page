@@ -62,6 +62,7 @@ export default function ProductInfo({
                 width={16}
                 height={16}
                 className="cartIcon"
+                alt='cart icon'
             />
             Add to cart
             </button>

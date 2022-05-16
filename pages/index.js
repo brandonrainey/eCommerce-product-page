@@ -38,6 +38,10 @@ export default function Home() {
     <AuthProvider>
 
       <div className='mainContainer'>
+        <Head >
+          <meta name='description' content='ecommerce product page'></meta>
+          <title>eCommerce Product Page</title>
+        </Head>
       {openLightbox ? <Lightbox openLightbox={openLightbox} setOpenLightbox={setOpenLightbox}/> : null}
       <Header
         open={open}

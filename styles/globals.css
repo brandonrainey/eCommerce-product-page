@@ -219,6 +219,7 @@ a {
   gap: 18px;
   margin-top: 10px;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .cartContainer {
@@ -441,7 +442,7 @@ input {
   width: 50%;
   height: 30px;
   border-radius: 10px;
-  
+  font-size: 0.9rem;
   margin-bottom: 20px;
   font-weight: 700;
 }

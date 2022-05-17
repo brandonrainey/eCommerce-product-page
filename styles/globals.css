@@ -124,6 +124,7 @@ a {
   margin-top: -40px;
   position: relative;
   background: white;
+  padding-bottom: 20px;
 }
 
 .companyTitle {
@@ -518,6 +519,7 @@ input {
    justify-content: center;
    padding: 0;
    z-index: 10;
+   
  }
 
  .mainWrapper {

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-export default function DesktopProductImages({ openLightbox, setOpenLightbox }) {
+export default function DesktopProductImages({
+  setOpenLightbox,
+}) {
   const [desktopImage, setDesktopImage] = useState(1)
 
   return (
@@ -12,7 +14,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
           marginBottom: 60,
           borderRadius: '14px',
           overflow: 'hidden',
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
         onClick={() => setOpenLightbox(true)}
       >
@@ -21,7 +23,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
           layout="responsive"
           width={300}
           height={300}
-          alt='product image'
+          alt="product image"
         />
       </div>
 
@@ -47,7 +49,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
-              alt='product-1-thumbnail'
+              alt="product-1-thumbnail"
             />
           </div>
         </div>
@@ -73,7 +75,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
-              alt='product-2-thumbnail'
+              alt="product-2-thumbnail"
             />
           </div>
         </div>
@@ -99,7 +101,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
-              alt='product-3-thumbnail'
+              alt="product-3-thumbnail"
             />
           </div>
         </div>
@@ -125,7 +127,7 @@ export default function DesktopProductImages({ openLightbox, setOpenLightbox }) 
               layout="responsive"
               width={30}
               height={30}
-              alt='product-4-thumbnail'
+              alt="product-4-thumbnail"
             />
           </div>
         </div>

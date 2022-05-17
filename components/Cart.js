@@ -2,10 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 
 export default function Cart({ cartCount, setCartCount }) {
-
-
-  
-
   return (
     <div className="cartWrapper">
       <div className="cartContainer">
@@ -19,10 +15,9 @@ export default function Cart({ cartCount, setCartCount }) {
                   <Image
                     src="/image-product-1-thumbnail.jpg"
                     layout="fixed"
-                    
                     height={50}
                     width={50}
-                    alt='image-product-1-thumbnail'
+                    alt="image-product-1-thumbnail"
                   />
                 </div>
                 <div className="itemDescription">
@@ -32,13 +27,16 @@ export default function Cart({ cartCount, setCartCount }) {
                     <span className="priceTotal">${125 * cartCount}.00</span>
                   </div>
                 </div>
-                <button className="deleteButton" onClick={() => setCartCount(0)}>
+                <button
+                  className="deleteButton"
+                  onClick={() => setCartCount(0)}
+                >
                   <Image
                     src="/icon-delete.svg"
                     layout="fixed"
                     height={15}
                     width={15}
-                    alt='delete icon'
+                    alt="delete icon"
                   />
                 </button>
               </div>

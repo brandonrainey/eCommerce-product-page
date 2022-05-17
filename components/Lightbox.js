@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-export default function Lightbox({ openLightbox, setOpenLightbox }) {
+export default function Lightbox({ setOpenLightbox }) {
   const [lightboxImage, setLightboxImage] = useState(1)
 
   const [closeIcon, setCloseIcon] = useState('/icon-close-white.svg')
@@ -45,7 +45,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
             onMouseLeave={() => setCloseIcon('/icon-close-white.svg')}
             onClick={() => setOpenLightbox(false)}
             style={{ cursor: 'pointer' }}
-            alt='close icon'
+            alt="close icon"
           />
         </div>
 
@@ -77,7 +77,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="fixed"
                 width={10}
                 height={15}
-                alt='previous arrow icon'
+                alt="previous arrow icon"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
               layout="responsive"
               width={300}
               height={300}
-              alt='lightbox product image'
+              alt="lightbox product image"
             />
           </div>
           <div
@@ -113,7 +113,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="fixed"
                 width={10}
                 height={15}
-                alt='next arrow icon'
+                alt="next arrow icon"
               />
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
-                alt='product-1-thumbnail'
+                alt="product-1-thumbnail"
               />
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
-                alt='product-2-thumbnail'
+                alt="product-2-thumbnail"
               />
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
-                alt='product-3-thumbnail'
+                alt="product-3-thumbnail"
               />
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function Lightbox({ openLightbox, setOpenLightbox }) {
                 layout="responsive"
                 width={30}
                 height={30}
-                alt='product-4-thumbnail'
+                alt="product-4-thumbnail"
               />
             </div>
           </div>

@@ -1,7 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 
-export default function Login({ openSignup, setOpenSignup, openLogin, setOpenLogin }) {
+export default function Login({
+  setOpenSignup,
+
+  setOpenLogin,
+}) {
   const { login } = useAuth()
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -26,8 +30,7 @@ export default function Login({ openSignup, setOpenSignup, openLogin, setOpenLog
   }
 
   return (
-    
-      <div className="loginContainer">
+    <div className="loginContainer">
       <h1>Log In</h1>
       {error}
       <form className="formContainer" onSubmit={handleSubmit}>
@@ -42,13 +45,11 @@ export default function Login({ openSignup, setOpenSignup, openLogin, setOpenLog
           <button className="loginButton" type="submit">
             Log In
           </button>
-          <div onClick={handleSignup} className='signup'>Sign up</div>
+          <div onClick={handleSignup} className="signup">
+            Sign up
+          </div>
         </div>
       </form>
     </div>
-    
-      
-    
-    
   )
 }

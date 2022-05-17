@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 
 export default function ProductInfo({
@@ -6,7 +6,6 @@ export default function ProductInfo({
   setCount,
   cartCount,
   setCartCount,
-  isDesktop,
 }) {
   function addCount() {
     setCount(count + 1)
@@ -33,43 +32,36 @@ export default function ProductInfo({
       </p>
 
       <div>
-
-          <div className='priceContainer'>
-               <div className="priceWrapper">
-          <div className="price">$125.00</div>
-          <div className="discount">50%</div>
-          
-        </div>
-            <div className="originalPrice">$250.00</div>
+        <div className="priceContainer">
+          <div className="priceWrapper">
+            <div className="price">$125.00</div>
+            <div className="discount">50%</div>
           </div>
-       
+          <div className="originalPrice">$250.00</div>
+        </div>
 
-
-        <div className='countContainer'>
-            <div className="countWrapper">
+        <div className="countContainer">
+          <div className="countWrapper">
             <button className="minus" onClick={subtractCount}>
-                -
+              -
             </button>
             <div className="count">{count}</div>
             <button className="plus" onClick={addCount}>
-                +
+              +
             </button>
-            </div>
-            <button className="addToCart" onClick={addToCart}>
+          </div>
+          <button className="addToCart" onClick={addToCart}>
             <Image
-                src="/icon-cart-white.svg"
-                layout="fixed"
-                width={16}
-                height={16}
-                className="cartIcon"
-                alt='cart icon'
+              src="/icon-cart-white.svg"
+              layout="fixed"
+              width={16}
+              height={16}
+              className="cartIcon"
+              alt="cart icon"
             />
             Add to cart
-            </button>
+          </button>
         </div>
-        
-
-
       </div>
     </div>
   )

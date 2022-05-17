@@ -24,20 +24,29 @@ export default function MobileProductImages() {
     <div className="mobileImageContainer">
       <div className="iconWrapper">
         <div className="imgPrevious">
-          <button className="imgCircle prevButton" onClick={handlePreviousClick}>
+          <button
+            className="imgCircle prevButton"
+            onClick={handlePreviousClick}
+          >
             <Image
               src="/icon-previous.svg"
               layout="fixed"
               height={18}
               width={12}
-              className='arrowIcon'
-              alt='previous arrow icon'
+              className="arrowIcon"
+              alt="previous arrow icon"
             />
           </button>
         </div>
         <div className="imgNext">
           <button className="imgCircle nextButton" onClick={handleNextClick}>
-            <Image src="/icon-next.svg" layout="fixed" height={18} width={12} alt='next arrow icon'/>
+            <Image
+              src="/icon-next.svg"
+              layout="fixed"
+              height={18}
+              width={12}
+              alt="next arrow icon"
+            />
           </button>
         </div>
       </div>
@@ -48,7 +57,7 @@ export default function MobileProductImages() {
           layout="responsive"
           height={300}
           width={300}
-          alt='product image'
+          alt="product image"
         />
       </div>
     </div>

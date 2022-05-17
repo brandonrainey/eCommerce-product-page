@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import DesktopNav from './DesktopNav'
 import Login from './Login'
@@ -6,8 +6,18 @@ import Signup from './Signup'
 import Dashboard from './Dashboard'
 import { useAuth } from '../contexts/AuthContext'
 
-
-export default function Header({ open, setOpen, count, setCount, cartCount, setOpenMenu, openMenu, isDesktop, openLogin, setOpenLogin, openSignup, setOpenSignup, }) {
+export default function Header({
+  open,
+  setOpen,
+  cartCount,
+  setOpenMenu,
+  openMenu,
+  isDesktop,
+  openLogin,
+  setOpenLogin,
+  openSignup,
+  setOpenSignup,
+}) {
   const { currentUser } = useAuth()
 
   function handleLoginToggle() {
@@ -26,30 +36,60 @@ export default function Header({ open, setOpen, count, setCount, cartCount, setO
     setOpen(!open)
   }
 
-  
   return (
     <div className="headerContainer">
-
-{openLogin ? currentUser ? <Dashboard /> : <Login openSignup={openSignup} setOpenSignup={setOpenSignup} openLogin={openLogin} setOpenLogin={setOpenLogin}/> : null}
-        {openSignup? <Signup openLogin={openLogin} setOpenLogin={setOpenLogin} openSignup={openSignup} setOpenSignup={setOpenSignup}/> : null}
-
+      {openLogin ? (
+        currentUser ? (
+          <Dashboard />
+        ) : (
+          <Login
+            openSignup={openSignup}
+            setOpenSignup={setOpenSignup}
+            openLogin={openLogin}
+            setOpenLogin={setOpenLogin}
+          />
+        )
+      ) : null}
+      {openSignup ? (
+        <Signup
+          openLogin={openLogin}
+          setOpenLogin={setOpenLogin}
+          openSignup={openSignup}
+          setOpenSignup={setOpenSignup}
+        />
+      ) : null}
 
       <div className="headerCell">
-        {isDesktop ? null : <Image src="/icon-menu.svg" layout="fixed" height={20} width={20} onClick={() => setOpenMenu(!openMenu)} alt='mobile sandwich icon'/>}
-        
-        <div className='navWrapper'>
+        {isDesktop ? null : (
+          <Image
+            src="/icon-menu.svg"
+            layout="fixed"
+            height={20}
+            width={20}
+            onClick={() => setOpenMenu(!openMenu)}
+            alt="mobile sandwich icon"
+          />
+        )}
+
+        <div className="navWrapper">
           <header>sneakers</header>
-        {isDesktop ? <DesktopNav /> : null}
+          {isDesktop ? <DesktopNav /> : null}
         </div>
-        
       </div>
 
       <div className="headerCell">
-        <button className='cartButton' onClick={handleCartToggle}>
-          <Image src="/icon-cart.svg" layout="fixed" height={25} width={25} alt='cart icon'/>
-          <span className={`${cartCount != 0 ? 'cartCounter' : ''}`}>{cartCount != 0 ? cartCount : null}</span>
+        <button className="cartButton" onClick={handleCartToggle}>
+          <Image
+            src="/icon-cart.svg"
+            layout="fixed"
+            height={25}
+            width={25}
+            alt="cart icon"
+          />
+          <span className={`${cartCount != 0 ? 'cartCounter' : ''}`}>
+            {cartCount != 0 ? cartCount : null}
+          </span>
         </button>
-        
 
         <a onClick={handleLoginToggle}>
           <Image
@@ -57,13 +97,10 @@ export default function Header({ open, setOpen, count, setCount, cartCount, setO
             layout="fixed"
             height={30}
             width={30}
-            className='imageAvatar'
-            alt='avatar image'
+            className="imageAvatar"
+            alt="avatar image"
           />
         </a>
-
-        
-        
       </div>
     </div>
   )

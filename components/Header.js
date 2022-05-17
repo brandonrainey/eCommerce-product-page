@@ -24,8 +24,14 @@ export default function Header({
     if (open) {
       setOpen(false)
     }
-    setOpenSignup(false)
-    setOpenLogin(!openLogin)
+    if (openSignup) {
+      
+      setOpenSignup(false)
+    } else {
+      setOpenLogin(!openLogin)
+    }
+    
+    
   }
 
   function handleCartToggle() {

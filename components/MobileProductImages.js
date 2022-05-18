@@ -58,9 +58,8 @@ export default function MobileProductImages() {
           height={300}
           width={300}
           alt="product image"
-          placeholder="blur"
-          blurDataURL={`/image-product-${mobileImage}.jpg`}
           priority={true}
+          
         />
       </div>
     </div>

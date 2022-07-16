@@ -3,40 +3,61 @@ import React, { useState } from 'react'
 export default function DesktopNav() {
   const [navItem, setNavItem] = useState()
 
+  function handleNavClick(e) {
+    e.preventDefault()
+
+    setNavItem(e.target.name)
+  }
+
   return (
     <div className="desktopNav">
       <a
-        onClick={() => setNavItem(1)}
+        onClick={(e) => {
+          handleNavClick(e)
+        }}
         className={`${navItem == 1 ? 'navHighlight' : ''}`}
         href=""
+        name='1'
       >
         Collections
       </a>
       <a
-        onClick={() => setNavItem(2)}
+        onClick={(e) => {
+          handleNavClick(e)
+        }}
         className={`${navItem == 2 ? 'navHighlight' : ''}`}
         href=""
+        name='2'
       >
         Men
       </a>
       <a
-        onClick={() => setNavItem(3)}
+        onClick={(e) => {
+          handleNavClick(e)
+        }}
         className={`${navItem == 3 ? 'navHighlight' : ''}`}
         href=""
+        name='3'
       >
         Women
       </a>
       <a
-        onClick={() => setNavItem(4)}
+        onClick={(e) => {
+          handleNavClick(e)
+        }}
         className={`${navItem == 4 ? 'navHighlight' : ''}`}
         href=""
+        name='4'
       >
         About
       </a>
       <a
-        onClick={() => setNavItem(5)}
+        onClick={(e) => {
+          handleNavClick(e)
+        }}
         className={`${navItem == 5 ? 'navHighlight' : ''}`}
         href=""
+        name='5'
       >
         Contact
       </a>
